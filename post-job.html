@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опубликовать заказ | TeenWork</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .post-job-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(255, 184, 0, 0.1);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="TeenWork Logo" class="logo-img"
+                    onerror="this.style.display='none'; document.getElementById('logo-text-hdr').style.display='inline-flex';">
+                <span class="logo-text" id="logo-text-hdr" style="display: none;"><span
+                        class="text-yellow">Teen</span><span class="text-black">Work</span></span>
+            </a>
+
+            <nav class="nav">
+                <a href="jobs.html" class="nav-link">Поиск работы</a>
+                <a href="index.html#features" class="nav-link">Преимущества</a>
+                <a href="index.html#education" class="nav-link">Обучение</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-outline" id="btn-login">Войти</button>
+                <div class="user-profile-stub" style="display: none; align-items: center; gap: 12px;"></div>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Открыть меню">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <div class="container post-job-container">
+            <div class="glass-panel" style="padding: clamp(20px, 4vw, 40px);">
+                <h1 style="font-size: clamp(1.5rem, 5vw, 2.5rem); margin-bottom: 8px;">Создание заказа</h1>
+                <p style="color: var(--text-muted); margin-bottom: 32px;">Заполните форму ниже, чтобы найти идеального
+                    исполнителя среди тысяч молодых талантов.</p>
+
+                <form id="post-job-form">
+                    <div class="form-group">
+                        <label for="job-title">Название заказа</label>
+                        <input type="text" id="job-title" class="form-control"
+                            placeholder="Например: Сделать дизайн презентации для стартапа" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="job-category">Категория</label>
+                            <select id="job-category" class="form-control" required>
+                                <option value="" disabled selected>Выберите категорию...</option>
+                                <option value="design">Дизайн и Арт</option>
+                                <option value="it">IT и Программирование</option>
+                                <option value="texts">Тексты и Переводы</option>
+                                <option value="marketing">Маркетинг и SMM</option>
+                                <option value="other">Разное / Офлайн</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="job-type">Тип работы</label>
+                            <select id="job-type" class="form-control" required>
+                                <option value="one-time">Разовый заказ</option>
+                                <option value="project">Проектная работа</option>
+                                <option value="internship">Стажировка</option>
+                                <option value="shifts">Смены (Офлайн)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="job-budget">Бюджет (₽)</label>
+                            <input type="number" id="job-budget" class="form-control" placeholder="Например: 5000"
+                                min="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="job-format">Формат работы</label>
+                            <select id="job-format" class="form-control" required>
+                                <option value="remote">Удаленно</option>
+                                <option value="office">В офисе / На месте</option>
+                                <option value="hybrid">Гибрид</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="job-desc">Описание задачи</label>
+                        <textarea id="job-desc" class="form-control"
+                            placeholder="Подробно опишите, что нужно сделать, какие навыки требуются от исполнителя и ожидаемые результаты."
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="job-tags">Ключевые навыки (теги)</label>
+                        <input type="text" id="job-tags" class="form-control"
+                            placeholder="Например: Figma, Презентации, Дизайн">
+                    </div>
+
+                    <div style="margin-top: 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+                        <span style="color: var(--text-muted); font-size: 0.9rem;"><i class="ph-fill ph-info"></i> Все
+                            заказы проходят модерацию</span>
+                        <button type="submit" class="btn btn-primary btn-lg">Опубликовать <i
+                                class="ph-bold ph-arrow-right"></i></button>
+                    </div>
+                </form>
+
+                <div id="success-message" style="display: none; text-align: center; padding: 40px 0;">
+                    <div
+                        style="width: 80px; height: 80px; background: rgba(0, 200, 83, 0.1); color: #00c853; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px; margin: 0 auto 24px;">
+                        <i class="ph-bold ph-check"></i>
+                    </div>
+                    <h2>Заказ успешно опубликован!</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 24px;">Он появится в ленте после быстрой
+                        модерации.</p>
+                    <a href="jobs.html" class="btn btn-outline">Перейти к заказам</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="margin-top: 60px;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 TeenWork. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('post-job-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+            window.scrollTo(0, 0);
+        });
+    </script>
+</body>
+
+</html>

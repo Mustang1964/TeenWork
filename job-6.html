@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перевод субтитров с английского языка на русский | TeenWork</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="TeenWork Logo" class="logo-img"
+                    onerror="this.style.display='none'; document.getElementById('logo-text-hdr').style.display='inline-flex';">
+                <span class="logo-text" id="logo-text-hdr" style="display: none;"><span class="text-yellow">Teen</span><span class="text-black">Work</span></span>
+            </a>
+            <nav class="nav">
+                <a href="jobs.html" class="nav-link">Поиск работы</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline" id="btn-login">Войти</button>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Открыть меню">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </header>
+    <main class="jobs-page">
+        <div class="container">
+            <a href="jobs.html" style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px; color: var(--text-muted);"><i class="ph-bold ph-arrow-left"></i> Назад к поиску</a>
+            
+            <div class="job-detail-header reveal-on-scroll">
+                <div class="job-detail-top">
+                    <div>
+                        <div class="job-tag">Разовый заказ • 1 день</div>
+                        <h1 class="job-detail-title">Перевод субтитров с английского языка на русский</h1>
+                        <div class="job-detail-tags">
+                            <span class="job-card-tag">Переводы</span>
+                            <span class="job-card-tag">Английский</span>
+                            <span class="job-card-tag">Удаленно</span>
+                        </div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="job-detail-price">1 500 ₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-detail-content">
+                <div class="job-detail-main reveal-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="job-detail-section">
+                        <h3>Описание задачи</h3>
+                        <p>Ищем студента-лингвиста для перевода субтитров к познавательному 20-минутному видео на YouTube. Тематика — космос. Требуется знание английского от B2.</p>
+                    </div>
+                    <div style="margin-top: 48px; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 32px;">
+                        <button class="btn btn-primary btn-lg"><i class="ph-bold ph-paper-plane-tilt"></i> Откликнуться на заказ</button>
+                    </div>
+                </div>
+                <aside class="job-detail-sidebar reveal-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="employer-card">
+                        <img src="https://ui-avatars.com/api/?name=Voice&background=random" alt="Логотип">
+                        <h4>Студия "VoiceOver"</h4>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <footer class="footer" style="margin-top: 60px;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 TeenWork. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="overlay" id="overlay"></div>
+    <script src="js/script.js"></script>
+</body>
+</html>

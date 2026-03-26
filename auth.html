@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация | TeenWork</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fafafa;
+            padding: 24px;
+        }
+
+        .auth-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+        }
+
+        .auth-tabs {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+            padding-bottom: 16px;
+        }
+
+        .auth-tab {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .auth-tab.active {
+            color: var(--secondary);
+        }
+
+        .auth-tab.active::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -18px;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .form-group-auth {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group-auth label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--secondary);
+            font-size: 0.95rem;
+        }
+
+        .form-control-auth {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control-auth:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(255, 184, 0, 0.1);
+        }
+
+        .social-auth {
+            margin-top: 32px;
+        }
+
+        .social-divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+        }
+
+        .social-divider::before,
+        .social-divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .social-divider:not(:empty)::before {
+            margin-right: .25em;
+        }
+
+        .social-divider:not(:empty)::after {
+            margin-left: .25em;
+        }
+
+        .btn-social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: #fff;
+            color: var(--secondary);
+        }
+
+        .btn-social:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-social.max {
+            background: #000;
+            color: #fff;
+            border-color: #000;
+        }
+
+        .svg-icon {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="auth-container">
+        <div class="auth-card">
+
+            <a href="index.html" class="logo" style="justify-content: center; margin-bottom: 32px;">
+                <img src="assets/logo.png" alt="TeenWork Logo" class="logo-img" style="height: 48px;"
+                    onerror="this.style.display='none'; document.getElementById('logo-text-hdr').style.display='inline-flex';">
+                <span class="logo-text" id="logo-text-hdr" style="display: none; font-size: 2rem;"><span
+                        class="text-yellow">Teen</span><span class="text-black">Work</span></span>
+            </a>
+
+            <div class="auth-tabs">
+                <div class="auth-tab active" id="tab-login" onclick="switchTab('login')">Вход</div>
+                <div class="auth-tab" id="tab-register" onclick="switchTab('register')">Регистрация</div>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form">
+                <div class="form-group-auth">
+                    <label>Email или Номер телефона</label>
+                    <input type="text" class="form-control-auth" placeholder="example@mail.ru" required>
+                </div>
+                <div class="form-group-auth">
+                    <label>Пароль</label>
+                    <input type="password" class="form-control-auth" placeholder="Ваш пароль" required>
+                </div>
+                <div style="text-align: right; margin-bottom: 24px;">
+                    <a href="#" style="font-size: 0.9rem; color: var(--primary); font-weight: 500;">Забыли пароль?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block"
+                    style="width: 100%; padding: 16px; font-size: 1.1rem; border-radius: 12px;">Войти</button>
+            </form>
+
+            <div class="social-auth">
+                <div class="social-divider">или войти через</div>
+
+                <!-- MAX Messenger Button -->
+                <button class="btn-social">
+                    <!-- Custom SVG representing MAX Messenger (Bold M in a speech bubble style) -->
+                    <svg class="svg-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_5_53)">
+                            <path
+                                d="M60.0255 0H19.9745C8.94288 0 0 8.94288 0 19.9745V60.0255C0 71.0571 8.94288 80 19.9745 80H60.0255C71.0571 80 80 71.0571 80 60.0255V19.9745C80 8.94288 71.0571 0 60.0255 0Z"
+                                fill="url(#paint0_linear_5_53)" />
+                            <path
+                                d="M60.0255 0H19.9745C8.94288 0 0 8.94288 0 19.9745V60.0255C0 71.0571 8.94288 80 19.9745 80H60.0255C71.0571 80 80 71.0571 80 60.0255V19.9745C80 8.94288 71.0571 0 60.0255 0Z"
+                                fill="url(#paint1_radial_5_53)" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M40.6569 70.2662C34.6563 70.2662 31.8678 69.3902 27.0206 65.8862C23.9546 69.8282 14.2458 72.9089 13.8223 67.6382C13.8223 63.6818 12.9463 60.3384 11.9535 56.6884C10.771 52.1916 9.42776 47.1838 9.42776 39.9278C9.42776 22.5977 23.6481 9.56 40.4963 9.56C57.3591 9.56 70.5721 23.2401 70.5721 40.0883C70.6286 56.676 57.2445 70.1778 40.6569 70.2662ZM40.9051 24.5394C32.7 24.1161 26.3052 29.7954 24.889 38.7014C23.721 46.0743 25.7942 55.0532 27.5608 55.5204C28.4076 55.7248 30.5392 54.002 31.8678 52.6734C34.0647 54.1911 36.6229 55.1026 39.2846 55.316C47.7864 55.725 55.051 49.2525 55.6218 40.76C55.9541 32.2494 49.4082 25.0411 40.9051 24.5541V24.5394Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <linearGradient id="paint0_linear_5_53" x1="9.42776" y1="60.8429" x2="80" y2="40"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#44CCFF" />
+                                <stop offset="0.662" stop-color="#5533EE" />
+                                <stop offset="1" stop-color="#9933DD" />
+                            </linearGradient>
+                            <radialGradient id="paint1_radial_5_53" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(-1.90326 -35.1348) rotate(51.356) scale(97.0814 40)">
+                                <stop stop-color="#0000FF" />
+                                <stop offset="1" stop-opacity="0" />
+                            </radialGradient>
+                            <clipPath id="clip0_5_53">
+                                <rect width="80" height="80" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    MAX
+                </button>
+                <!-- Google Button -->
+                <button class="btn-social">
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <path fill="#4285F4"
+                            d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                        <path fill="#34A853"
+                            d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                        <path fill="#FBBC05"
+                            d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                        <path fill="#EA4335"
+                            d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                        <path fill="none" d="M1 1h22v22H1z" />
+                    </svg>
+                    Google
+                </button>
+
+                <!-- Apple Button -->
+                <button class="btn-social">
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <path fill="#000000"
+                            d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.19 2.24-.86 3.44-.8 1.57.14 2.82.72 3.84 1.83-3.12 1.89-2.58 6.09.68 7.4-1.12 2.37-2.12 3.89-3.04 3.74zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                    </svg>
+                    Apple
+                </button>
+            </div>
+
+            <a href="index.html"
+                style="display: inline-block; margin-top: 24px; color: var(--text-muted); font-size: 0.95rem; text-decoration: none;">&larr;
+                Вернуться на главную</a>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tab) {
+            document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
+            document.getElementById('tab-' + tab).classList.add('active');
+
+            // This is just a UI stub for switching tabs seamlessly. 
+            // In a real app we'd toggle forms.
+            const btn = document.querySelector('#login-form button[type="submit"]');
+            if (tab === 'register') {
+                btn.textContent = 'Зарегистрироваться';
+            } else {
+                btn.textContent = 'Войти';
+            }
+        }
+    </script>
+</body>
+
+</html>

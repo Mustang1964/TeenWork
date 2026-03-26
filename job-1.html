@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание презентации для IT-стартапа | TeenWork</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="TeenWork Logo" class="logo-img"
+                    onerror="this.style.display='none'; document.getElementById('logo-text-hdr').style.display='inline-flex';">
+                <span class="logo-text" id="logo-text-hdr" style="display: none;"><span
+                        class="text-yellow">Teen</span><span class="text-black">Work</span></span>
+            </a>
+
+            <nav class="nav">
+                <a href="jobs.html" class="nav-link">Поиск работы</a>
+                <a href="index.html#features" class="nav-link">Преимущества</a>
+                <a href="index.html#education" class="nav-link">Обучение</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-outline" id="btn-login">Войти</button>
+                <button class="btn btn-primary" id="btn-register">Регистрация</button>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Открыть меню">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="jobs-page">
+        <div class="container">
+            <a href="jobs.html" style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px; color: var(--text-muted);"><i class="ph-bold ph-arrow-left"></i> Назад к поиску</a>
+            
+            <div class="job-detail-header reveal-on-scroll">
+                <div class="job-detail-top">
+                    <div>
+                        <div class="job-tag">Разовый заказ</div>
+                        <h1 class="job-detail-title">Создание презентации для IT-стартапа</h1>
+                        <div class="job-detail-tags">
+                            <span class="job-card-tag">Дизайн</span>
+                            <span class="job-card-tag">Figma</span>
+                            <span class="job-card-tag">PowerPoint</span>
+                            <span class="job-card-tag">Удаленно</span>
+                        </div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="job-detail-price">2 500 ₽</div>
+                        <span class="guarantee-badge mt-4" style="display: inline-flex;"><i class="ph-fill ph-shield-check"></i> Гарантия</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-detail-content">
+                <!-- Main Content -->
+                <div class="job-detail-main reveal-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="job-detail-section">
+                        <h3>Описание задачи</h3>
+                        <p>Ищем креативного специалиста для создания современной презентации продукта (10-12 слайдов). Есть готовый текст и логотип. Нужно продумать визуальную концепцию, подобрать иллюстрации, сверстать в Figma или PowerPoint так, чтобы это выглядело дорого.</p>
+                    </div>
+
+                    <div class="job-detail-section">
+                        <h3>Требования</h3>
+                        <ul>
+                            <li>Базовый опыт в веб-дизайне или создании презентаций.</li>
+                            <li>Умение работать в Figma, Photoshop или продвинуто в PowerPoint.</li>
+                            <li>Наличие хотя бы 1-2 работ в портфолио (можно учебных).</li>
+                            <li>Внимание к деталям и соблюдение сроков (дедлайн через 2 дня после старта).</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-detail-section">
+                        <h3>Что вы получите</h3>
+                        <ul>
+                            <li>Гарантированную оплату 2 500 ₽ на счет TeenWork сразу после принятия работы.</li>
+                            <li>Отличный кейс в портфолио от реального бизнеса.</li>
+                            <li>Отзыв в ваш профиль исполнителя, который поможет брать более дорогие заказы в будущем.</li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-top: 48px; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 32px;">
+                        <button class="btn btn-primary btn-lg"><i class="ph-bold ph-paper-plane-tilt"></i> Откликнуться на заказ</button>
+                    </div>
+                </div>
+
+                <!-- Sidebar Content -->
+                <aside class="job-detail-sidebar reveal-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="employer-card">
+                        <img src="https://ui-avatars.com/api/?name=TechNova&background=random" alt="Логотип">
+                        <h4>ООО "ТехНова" <i class="ph-fill ph-seal-check verified" style="color:var(--primary)" title="Верифицирован"></i></h4>
+                        <p style="color:var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">IT-Компания</p>
+                        
+                        <div class="employer-rating">
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <span style="color:var(--secondary); font-weight: 600; margin-left: 4px;">4.9</span>
+                        </div>
+
+                        <div class="employer-stats">
+                            <div class="employer-stat">
+                                <span>12</span>
+                                <span>Заказов</span>
+                            </div>
+                            <div class="employer-stat">
+                                <span>100%</span>
+                                <span>Оплат</span>
+                            </div>
+                            <div class="employer-stat">
+                                <span>5</span>
+                                <span>Отзывов</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-outline btn-block mt-4">Все заказы работодателя</button>
+                    </div>
+
+                    <div class="glass-panel" style="padding: 24px;">
+                        <h4 style="margin-bottom: 16px;">Похожие заказы</h4>
+                        <div style="display: flex; flex-direction: column; gap: 16px;">
+                            <a href="#" style="display: block; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 12px;">
+                                <div style="font-weight: 600; color:var(--secondary); margin-bottom: 4px;">Сделать обложку для подкаста</div>
+                                <div style="color:var(--primary); font-weight: 700;">1 000 ₽</div>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="margin-top: 60px;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 TeenWork. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+    <script src="js/script.js"></script>
+</body>
+</html>

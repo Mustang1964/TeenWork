@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeenWork | Безопасная работа и стажировки для молодежи</title>
+    <meta name="description"
+        content="TeenWork — платформа безопасного поиска подработки, стажировок и разовых заказов для молодежи 14–25 лет. Доступ к проверенным работодателям и страховой фонд.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="TeenWork Logo" class="logo-img"
+                    onerror="this.style.display='none'; document.getElementById('logo-text-hdr').style.display='inline-flex';">
+                <span class="logo-text" id="logo-text-hdr" style="display: none;"><span
+                        class="text-yellow">Teen</span><span class="text-black">Work</span></span>
+            </a>
+
+            <nav class="nav">
+                <a href="#features" class="nav-link">Преимущества</a>
+                <a href="#education" class="nav-link">Обучение</a>
+                <a href="#employers" class="nav-link">Работодателям</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="auth.html" class="btn btn-outline" id="btn-login"
+                    style="text-decoration:none; display:inline-flex; align-items:center;">Войти</a>
+                <a href="auth.html" class="btn btn-primary" id="btn-register"
+                    style="text-decoration:none; display:inline-flex; align-items:center;">Зарегистрироваться</a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Открыть меню">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="bg-glow-container">
+                <div class="glow-orb orb-1"></div>
+                <div class="glow-orb orb-2"></div>
+                <div class="glow-orb orb-3"></div>
+            </div>
+            <div class="container hero-container">
+                <div class="hero-content">
+
+                    <h1 class="hero-title fade-in-up" style="animation-delay: 0.1s;">
+                        Первая безопасная<br>
+                        биржа труда<br>
+                        для<br>
+                        молодежи<br>
+                        <span class="highlight">14–25 лет</span>
+                    </h1>
+                    <p class="hero-text fade-in-up" style="animation-delay: 0.2s;">
+                        Хватит искать смены и заказы в сомнительных пабликах. Находи разовые заказы, оплачиваемые
+                        стажировки и подработку с гарантией оплаты на платформе TeenWork. Мы защищаем твои права!
+                    </p>
+                    <div class="hero-buttons fade-in-up" style="animation-delay: 0.3s;">
+                        <a href="jobs.html" class="btn btn-primary btn-lg">Найти подработку</a>
+                        <a href="post-job.html" class="btn btn-secondary btn-lg"
+                            style="display:inline-flex; align-items:center; justify-content:center; text-decoration:none;">Опубликовать
+                            заказ</a>
+                    </div>
+
+                    <div class="stats fade-in-up" style="animation-delay: 0.4s;">
+                        <div class="stat-item">
+                            <div class="stat-value">5%</div>
+                            <div class="stat-label">Страховой фонд</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Верификация</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">250+</div>
+                            <div class="stat-label">Бета-тестеров</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual fade-in" style="animation-delay: 0.2s;">
+                    <div class="glass-card mockup-card mockup-profile">
+                        <div class="mockup-header">
+                            <img src="https://i.pravatar.cc/150?img=33" alt="Аватар" class="mockup-avatar">
+                            <div>
+                                <div class="mockup-name">Алексей С. <i class="ph-fill ph-seal-check verified-icon"></i>
+                                </div>
+                                <div class="mockup-level">Уровень 5: PRO-флансер</div>
+                            </div>
+                        </div>
+                        <div class="mockup-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%;"></div>
+                            </div>
+                            <div class="progress-text">Осталось 200 XP до Уровня 6</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card mockup-card mockup-job">
+                        <div class="job-tag">Разовый заказ</div>
+                        <div class="job-title">Создание презентации для IT-проекта</div>
+                        <div class="job-price">2 500 ₽ <span class="guarantee-badge"><i
+                                    class="ph-fill ph-shield-check"></i> Гарантия</span></div>
+                        <button class="btn btn-primary btn-sm btn-block">Откликнуться</button>
+                    </div>
+
+                    <div class="glass-card mockup-card mockup-course">
+                        <i class="ph-duotone ph-student course-icon"></i>
+                        <div>
+                            <div class="course-title">Основы самозанятости</div>
+                            <div class="course-meta">Видеоурок • 15 мин</div>
+                        </div>
+                        <button class="btn btn-icon"><i class="ph-fill ph-play-circle"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROBLEMS & SOLUTIONS -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Почему <span class="text-gradient">TeenWork</span>?</h2>
+                    <p class="section-subtitle">Мы решили главные проблемы поиска работы для подростков и студентов,
+                        создав безопасную и удобную среду.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card glass-panel reveal-on-scroll">
+                        <div class="feature-icon"><i class="ph-duotone ph-shield-warning"></i></div>
+                        <h3 class="feature-title">Безопасность и защита сделок</h3>
+                        <p class="feature-desc">Больше никаких "кинули на деньги". Мы отчисляем 5% от прибыли в
+                            Страховой Фонд. В случае обмана вы получаете компенсацию.</p>
+                    </div>
+                    <div class="feature-card glass-panel reveal-on-scroll" style="transition-delay: 0.1s;">
+                        <div class="feature-icon"><i class="ph-duotone ph-identification-card"></i></div>
+                        <h3 class="feature-title">Полная верификация</h3>
+                        <p class="feature-desc">И заказчики, и исполнители проходят подтверждение личности. Рейтинговая
+                            система и отзывы исключают недобросовестных участников.</p>
+                    </div>
+                    <div class="feature-card glass-panel reveal-on-scroll" style="transition-delay: 0.2s;">
+                        <div class="feature-icon"><i class="ph-duotone ph-clock-user"></i></div>
+                        <h3 class="feature-title">Гибкий график</h3>
+                        <p class="feature-desc">Разовые поручения, посменная работа или стажировки, которые легко
+                            совмещать с учебой в школе, колледже или ВУЗе.</p>
+                    </div>
+                    <div class="feature-card glass-panel reveal-on-scroll" style="transition-delay: 0.3s;">
+                        <div class="feature-icon"><i class="ph-duotone ph-game-controller"></i></div>
+                        <h3 class="feature-title">Геймификация</h3>
+                        <p class="feature-desc">Прокачивай свой профиль, получай достижения и бейджи за выполненные
+                            задачи, открывая доступ к более дорогим заказам.</p>
+                    </div>
+                    <div class="feature-card glass-panel reveal-on-scroll" style="transition-delay: 0.4s;">
+                        <div class="feature-icon"><i class="ph-duotone ph-handshake"></i></div>
+                        <h3 class="feature-title">Без конкуренции со взрослыми</h3>
+                        <p class="feature-desc">Платформа создана специально для молодежи. Заказчики приходят именно к
+                            вам, потому что ценят энергию и доступность.</p>
+                    </div>
+                    <div class="feature-card glass-panel reveal-on-scroll" style="transition-delay: 0.5s;">
+                        <div class="feature-icon"><i class="ph-duotone ph-map-pin"></i></div>
+                        <h3 class="feature-title">Локальные вакансии</h3>
+                        <p class="feature-desc">Работа в кафе, умная сортировка смен и алгоритмы рекомендаций — найди
+                            работу прямо в своем районе.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section id="education" class="section section-alt">
+            <div class="container steps-container">
+                <div class="steps-content reveal-on-scroll">
+                    <div class="badge badge-dark">База знаний</div>
+                    <h2 class="section-title">Мы не просто биржа, мы — <span class="text-gradient">комьюнити</span></h2>
+                    <p class="section-subtitle" style="margin-left:0; text-align:left;">
+                        Для большинства наших пользователей это первый трудовой опыт. Специально для вас мы разработали
+                        базу знаний:
+                    </p>
+
+                    <ul class="benefit-list">
+                        <li>
+                            <i class="ph-fill ph-check-circle"></i>
+                            <div>
+                                <strong>Инструкции по оформлению</strong>
+                                <p>Как стать самозанятым за 5 минут без походов в налоговую.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ph-fill ph-check-circle"></i>
+                            <div>
+                                <strong>Защита своих прав</strong>
+                                <p>Понятные гайды о трудовых правах несовершеннолетних, договорах ГПХ.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ph-fill ph-check-circle"></i>
+                            <div>
+                                <strong>Видеоуроки и курсы</strong>
+                                <p>Учим базовым софт-скиллам: как составить резюме, общаться с клиентом и презентовать
+                                    себя.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="steps-visual reveal-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="glass-card video-card">
+                        <div class="video-thumbnail">
+                            <i class="ph-fill ph-play-circle play-huge"></i>
+                            <div class="duration">12:45</div>
+                        </div>
+                        <div class="video-info">
+                            <h4>Как не дать себя обмануть при первой работе?</h4>
+                            <p>Эксперт: Юрист по трудовому праву</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EMPLOYERS SECTION -->
+        <section id="employers" class="section">
+            <div class="container">
+                <div class="cta-box glass-panel text-center reveal-on-scroll">
+                    <h2 class="section-title">Вы — работодатель?</h2>
+                    <p class="section-subtitle mx-auto">
+                        Получите доступ к тысячам мотивированных молодых талантов. Закрывайте разовые задачи за часы,
+                        масштабируйте линейный персонал и находите стажеров с минимальными затратами.
+                    </p>
+                    <div class="employer-benefits">
+                        <div class="emp-ben">
+                            <i class="ph-duotone ph-rocket-launch"></i>
+                            <span>Быстрый наём</span>
+                        </div>
+                        <div class="emp-ben">
+                            <i class="ph-duotone ph-coins"></i>
+                            <span>Экономия бюджета</span>
+                        </div>
+                        <div class="emp-ben">
+                            <i class="ph-duotone ph-users-three"></i>
+                            <span>Энергичные кадры</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons justify-center mt-4">
+                        <button class="btn btn-primary btn-lg">Опубликовать вакансию (200 ₽)</button>
+                        <button class="btn btn-outline btn-lg">Узнать о партнерстве</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="assets/logo.png" alt="TeenWork Logo" class="logo-img"
+                            onerror="this.style.display='none'; document.getElementById('logo-text-ftr').style.display='inline-flex';">
+                        <span class="logo-text" id="logo-text-ftr" style="display: none;"><span
+                                class="text-yellow">Teen</span><span class="text-black">Work</span></span>
+                    </a>
+                    <p class="footer-desc">
+                        Решаем проблему поиска безопасной и легальной подработки для молодежи 14–25 лет.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Telegram"><i class="ph-fill ph-telegram-logo"></i></a>
+                        <a href="#" aria-label="MAX"><svg class="svg-icon" viewBox="0 0 80 80" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_5_53_ftr)">
+                                    <path
+                                        d="M60.0255 0H19.9745C8.94288 0 0 8.94288 0 19.9745V60.0255C0 71.0571 8.94288 80 19.9745 80H60.0255C71.0571 80 80 71.0571 80 60.0255V19.9745C80 8.94288 71.0571 0 60.0255 0Z"
+                                        fill="url(#paint0_linear_5_53_ftr)" />
+                                    <path
+                                        d="M60.0255 0H19.9745C8.94288 0 0 8.94288 0 19.9745V60.0255C0 71.0571 8.94288 80 19.9745 80H60.0255C71.0571 80 80 71.0571 80 60.0255V19.9745C80 8.94288 71.0571 0 60.0255 0Z"
+                                        fill="url(#paint1_radial_5_53_ftr)" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M40.6569 70.2662C34.6563 70.2662 31.8678 69.3902 27.0206 65.8862C23.9546 69.8282 14.2458 72.9089 13.8223 67.6382C13.8223 63.6818 12.9463 60.3384 11.9535 56.6884C10.771 52.1916 9.42776 47.1838 9.42776 39.9278C9.42776 22.5977 23.6481 9.56 40.4963 9.56C57.3591 9.56 70.5721 23.2401 70.5721 40.0883C70.6286 56.676 57.2445 70.1778 40.6569 70.2662ZM40.9051 24.5394C32.7 24.1161 26.3052 29.7954 24.889 38.7014C23.721 46.0743 25.7942 55.0532 27.5608 55.5204C28.4076 55.7248 30.5392 54.002 31.8678 52.6734C34.0647 54.1911 36.6229 55.1026 39.2846 55.316C47.7864 55.725 55.051 49.2525 55.6218 40.76C55.9541 32.2494 49.4082 25.0411 40.9051 24.5541V24.5394Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <linearGradient id="paint0_linear_5_53_ftr" x1="9.42776" y1="60.8429" x2="80"
+                                        y2="40" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#44CCFF" />
+                                        <stop offset="0.662" stop-color="#5533EE" />
+                                        <stop offset="1" stop-color="#9933DD" />
+                                    </linearGradient>
+                                    <radialGradient id="paint1_radial_5_53_ftr" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(-1.90326 -35.1348) rotate(51.356) scale(97.0814 40)">
+                                        <stop stop-color="#0000FF" />
+                                        <stop offset="1" stop-opacity="0" />
+                                    </radialGradient>
+                                    <clipPath id="clip0_5_53_ftr">
+                                        <rect width="80" height="80" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg></a>
+                        <a href="#" aria-label="TikTok"><i class="ph-fill ph-tiktok-logo"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Платформа</h4>
+                    <ul>
+                        <li><a href="employers.html">Для работодателей</a></li>
+                        <li><a href="pro.html">TeenWork Pro (350 ₽/мес)</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Поддержка</h4>
+                    <ul>
+                        <li><a href="knowledge-base.html">База знаний</a></li>
+                        <li><a href="rules.html">Правила платформы</a></li>
+                        <li><a href="insurance.html">Страховой фонд</a></li>
+                        <li><a href="terms.html">Пользовательское соглашение</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 TeenWork. Все права защищены. Проект находится в стадии бета-тестирования.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Overlay & Modals logic -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск работы | TeenWork</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="TeenWork Logo" class="logo-img"
+                    onerror="this.style.display='none'; document.getElementById('logo-text-hdr').style.display='inline-flex';">
+                <span class="logo-text" id="logo-text-hdr" style="display: none;"><span
+                        class="text-yellow">Teen</span><span class="text-black">Work</span></span>
+            </a>
+
+            <nav class="nav">
+                <a href="index.html#features" class="nav-link">Преимущества</a>
+                <a href="index.html#education" class="nav-link">Обучение</a>
+                <a href="index.html#employers" class="nav-link">Работодателям</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-outline" id="btn-login">Войти</button>
+                <button class="btn btn-primary" id="btn-register">Зарегистрироваться</button>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Открыть меню">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="jobs-page">
+        <div class="container">
+            <h1 class="section-title text-center" style="margin-bottom: 24px;">Найти <span
+                    class="text-gradient">подработку</span></h1>
+            <button class="filters-toggle-btn" aria-label="Toggle filters">
+                <i class="ph ph-funnel-simple"></i>
+                <span>Показать фильтры</span>
+            </button>
+
+            <div class="jobs-layout">
+                <!-- Sidebar -->
+                <aside class="filters-sidebar reveal-on-scroll" style="transition-delay: 0.1s;">
+                    <h3 style="margin-bottom: 24px; font-size: 1.5rem;">Фильтры</h3>
+
+                    <div class="filter-group">
+                        <div class="filter-title">Тип работы</div>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="one-time"> Разовый заказ</label>
+                            <label><input type="checkbox" value="shifts"> Смены</label>
+                            <label><input type="checkbox" value="internship"> Стажировка</label>
+                            <label><input type="checkbox" value="project"> Проектная работа</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <div class="filter-title">Формат</div>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="remote"> Удаленно</label>
+                            <label><input type="checkbox" value="office"> В офисе / На месте</label>
+                            <label><input type="checkbox" value="hybrid"> Гибрид</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <div class="filter-title">Категория</div>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="it"> IT и Программирование</label>
+                            <label><input type="checkbox" value="design"> Дизайн и Арт</label>
+                            <label><input type="checkbox" value="texts"> Тексты и Переводы</label>
+                            <label><input type="checkbox" value="marketing"> Маркетинг</label>
+                            <label><input type="checkbox" value="other"> Офлайн / Разное</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <div class="filter-title">Опыт</div>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="none"> Без опыта</label>
+                            <label><input type="checkbox" value="low"> До 1 года</label>
+                            <label><input type="checkbox" value="mid"> От 1 года до 3 лет</label>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 24px;">
+                        <button class="btn btn-primary btn-block" id="apply-filters-btn">Применить фильтры</button>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="jobs-main">
+                    <!-- Search Header (now sits beside sidebar) -->
+                    <div class="search-header reveal-on-scroll" style="margin-bottom: 24px;">
+                        <div class="search-input-wrapper">
+                            <i class="ph-duotone ph-magnifying-glass"></i>
+                            <input type="text" class="search-input" placeholder="Профессия, навык или компания...">
+                        </div>
+                        <button class="btn btn-primary btn-lg">Найти</button>
+                    </div>
+
+                    <!-- Jobs Listing -->
+                    <div class="jobs-grid reveal-on-scroll" style="transition-delay: 0.2s;">
+                        <!-- Job 1 -->
+                        <div class="job-card" data-title="Создание презентации для IT-стартапа" data-type="one-time"
+                        data-format="remote" data-category="design" data-experience="low">
+                        <div class="job-card-main">
+                            <div class="job-card-title"><a href="job-1.html">Создание презентации для IT-стартапа</a>
+                            </div>
+                            <div class="job-card-employer">
+                                ООО "ТехНова" <i class="ph-fill ph-seal-check verified"
+                                    title="Верифицированный работодатель"></i>
+                                • <span style="margin-left: 4px;"><i class="ph-fill ph-star"
+                                        style="color:var(--warning)"></i> 4.9</span>
+                            </div>
+                            <div class="job-card-desc">
+                                Ищем креативного специалиста для создания современной презентации продукта (10-12
+                                слайдов). Есть готовый текст и логотип. Нужно продумать визуальную концепцию, подобрать
+                                иллюстрации, сверстать в Figma или PowerPoint так, чтобы это выглядело "дорого".
+                            </div>
+                            <div class="job-card-tags">
+                                <span class="job-card-tag">Дизайн</span>
+                                <span class="job-card-tag">Figma</span>
+                                <span class="job-card-tag">PowerPoint</span>
+                                <span class="job-card-tag">Удаленно</span>
+                            </div>
+                        </div>
+                        <div class="job-card-side">
+                            <div class="job-card-price">2 500 ₽</div>
+                            <div class="job-card-meta">Разовый заказ • 2 дня</div>
+                            <span class="guarantee-badge mt-4"><i class="ph-fill ph-shield-check"></i> Гарантия</span>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="job-card" data-title="Написать 5 статей для блога о технологиях" data-type="project"
+                        data-format="remote" data-category="texts" data-experience="low">
+                        <div class="job-card-main">
+                            <div class="job-card-title"><a href="job-2.html">Написать 5 статей для блога о
+                                    технологиях</a></div>
+                            <div class="job-card-employer">
+                                Digital Agency "Peak" <i class="ph-fill ph-seal-check verified"></i>
+                                • <span style="margin-left: 4px;"><i class="ph-fill ph-star"
+                                        style="color:var(--warning)"></i> 4.8</span>
+                            </div>
+                            <div class="job-card-desc">
+                                Требуется копирайтер для написания статей на тему гаджетов и IT-новинок. Объем каждой
+                                статьи 3000-4000 символов. Уникальность от 90%. Важно писать понятным языком, без воды.
+                            </div>
+                            <div class="job-card-tags">
+                                <span class="job-card-tag">Копирайтинг</span>
+                                <span class="job-card-tag">IT</span>
+                                <span class="job-card-tag">Удаленно</span>
+                            </div>
+                        </div>
+                        <div class="job-card-side">
+                            <div class="job-card-price">5 000 ₽</div>
+                            <div class="job-card-meta">Проект • 1 неделя</div>
+                        </div>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="job-card" data-title="Бариста выходного дня" data-type="shifts" data-format="office"
+                        data-category="other" data-experience="none">
+                        <div class="job-card-main">
+                            <div class="job-card-title"><a href="job-3.html">Бариста выходного дня</a></div>
+                            <div class="job-card-employer">
+                                Кофейня "Зерно" <i class="ph-fill ph-seal-check verified"></i>
+                                • <span style="margin-left: 4px;"><i class="ph-fill ph-star"
+                                        style="color:var(--warning)"></i> 5.0</span>
+                            </div>
+                            <div class="job-card-desc">
+                                Ищем бариста на субботу и воскресенье. Опыт не обязателен — всему научим за 2 дня
+                                стажировки. Главное — любовь к кофе и умение общаться с гостями. Гибкие смены.
+                            </div>
+                            <div class="job-card-tags">
+                                <span class="job-card-tag">Офлайн</span>
+                                <span class="job-card-tag">Смены</span>
+                                <span class="job-card-tag">Без опыта</span>
+                            </div>
+                        </div>
+                        <div class="job-card-side">
+                            <div class="job-card-price">2 000 ₽ <span
+                                    style="font-size: 0.9rem; color:var(--text-muted); font-weight: 500;">/ смена</span>
+                            </div>
+                            <div class="job-card-meta">Постоянная работа</div>
+                        </div>
+                    </div>
+
+                    <!-- Job 4 -->
+                    <div class="job-card" data-title="Помощник SMM-специалиста (Стажировка)" data-type="internship"
+                        data-format="remote" data-category="marketing" data-experience="none">
+                        <div class="job-card-main">
+                            <div class="job-card-title"><a href="job-4.html">Помощник SMM-специалиста (Стажировка)</a>
+                            </div>
+                            <div class="job-card-employer">
+                                Социальное медиа агенство
+                            </div>
+                            <div class="job-card-desc">
+                                Стажировка для тех, кто хочет развиваться в SMM. Задачи: поиск референсов, помощь в
+                                составлении контент-планов, написание коротких постов для соцсетей. При успешном
+                                прохождении стажировки берем в штат.
+                            </div>
+                            <div class="job-card-tags">
+                                <span class="job-card-tag">SMM</span>
+                                <span class="job-card-tag">Стажировка</span>
+                                <span class="job-card-tag">Удаленно</span>
+                            </div>
+                        </div>
+                        <div class="job-card-side">
+                            <div class="job-card-price">10 000 ₽ <span
+                                    style="font-size: 0.9rem; color:var(--text-muted); font-weight: 500;">/ мес</span>
+                            </div>
+                            <div class="job-card-meta">Стажировка • 1 мес</div>
+                        </div>
+                    </div>
+
+                    <!-- Job 5 -->
+                    <div class="job-card" data-title="Монтаж коротких видео (Reels, TikTok)" data-type="one-time"
+                        data-format="remote" data-category="design" data-experience="mid">
+                        <div class="job-card-main">
+                            <div class="job-card-title"><a href="job-5.html">Монтаж коротких видео (Reels, TikTok)</a>
+                            </div>
+                            <div class="job-card-employer">
+                                Блогер Иван С. <i class="ph-fill ph-seal-check verified"></i>
+                                • <span style="margin-left: 4px;"><i class="ph-fill ph-star"
+                                        style="color:var(--warning)"></i> 4.7</span>
+                            </div>
+                            <div class="job-card-desc">
+                                Нужно смонтировать 10 коротких видеороликов из предоставленных исходников. Наложить
+                                субтитры, добавить эффекты и музыку из трендов.
+                            </div>
+                            <div class="job-card-tags">
+                                <span class="job-card-tag">Видеомонтаж</span>
+                                <span class="job-card-tag">CapCut / Premiere Pro</span>
+                                <span class="job-card-tag">Удаленно</span>
+                            </div>
+                        </div>
+                        <div class="job-card-side">
+                            <div class="job-card-price">3 500 ₽</div>
+                            <div class="job-card-meta">Разовый заказ</div>
+                            <span class="guarantee-badge mt-4"><i class="ph-fill ph-shield-check"></i> Гарантия</span>
+                        </div>
+                    </div>
+
+                    <!-- Job 6 -->
+                    <div class="job-card" data-title="Перевод субтитров с английского языка на русский"
+                        data-type="one-time" data-format="remote" data-category="texts" data-experience="mid">
+                        <div class="job-card-main">
+                            <div class="job-card-title"><a href="job-6.html">Перевод субтитров с английского языка на
+                                    русский</a></div>
+                            <div class="job-card-employer">
+                                Студия "VoiceOver"
+                                • <span style="margin-left: 4px;"><i class="ph-fill ph-star"
+                                        style="color:var(--warning)"></i> 4.9</span>
+                            </div>
+                            <div class="job-card-desc">
+                                Ищем студента-лингвиста для перевода субтитров к познавательному 20-минутному видео на
+                                YouTube. Тематика — космос. Требуется знание английского от B2.
+                            </div>
+                            <div class="job-card-tags">
+                                <span class="job-card-tag">Переводы</span>
+                                <span class="job-card-tag">Английский</span>
+                                <span class="job-card-tag">Удаленно</span>
+                            </div>
+                        </div>
+                        <div class="job-card-side">
+                            <div class="job-card-price">1 500 ₽</div>
+                            <div class="job-card-meta">Разовый заказ • 1 день</div>
+                        </div>
+                    </div>
+
+                    <!-- Job 7 -->
+                    <div class="job-card" data-title="Провести опрос на улице (Промоутер)" data-type="one-time"
+                        data-format="office" data-category="marketing" data-experience="none">
+                        <div class="job-card-main">
+                            <div class="job-card-title"><a href="job-7.html">Провести опрос на улице (Промоутер)</a>
+                            </div>
+                            <div class="job-card-employer">
+                                Маркетинговое агенство "Сфера" <i class="ph-fill ph-seal-check verified"></i>
+                            </div>
+                            <div class="job-card-desc">
+                                Нужно провести социологический опрос среди молодежи (18-25 лет) в центре города. Каждый
+                                опрос занимает 2-3 минуты. За 4 часа нужно собрать минимум 40 анкет.
+                            </div>
+                            <div class="job-card-tags">
+                                <span class="job-card-tag">Офлайн</span>
+                                <span class="job-card-tag">Промоутер</span>
+                                <span class="job-card-tag">Без опыта</span>
+                            </div>
+                        </div>
+                        <div class="job-card-side">
+                            <div class="job-card-price">1 200 ₽</div>
+                            <div class="job-card-meta">Разовый заказ • 4 часа</div>
+                        </div>
+                    </div>
+
+                    <!-- Job 8 -->
+                    <div class="job-card" data-title="Оформить группу ВКонтакте" data-type="one-time"
+                        data-format="remote" data-category="design" data-experience="low">
+                        <div class="job-card-main">
+                            <div class="job-card-title"><a href="job-8.html">Оформить группу ВКонтакте</a></div>
+                            <div class="job-card-employer">
+                                Магазин "SneakerShop"
+                                • <span style="margin-left: 4px;"><i class="ph-fill ph-star"
+                                        style="color:var(--warning)"></i> 4.5</span>
+                            </div>
+                            <div class="job-card-desc">
+                                Нужен дизайн для сообщества ВК магазина кроссовок. Требуется обложка, аватар, 3 виджета
+                                и шаблон для постов.
+                            </div>
+                            <div class="job-card-tags">
+                                <span class="job-card-tag">Дизайн</span>
+                                <span class="job-card-tag">Photoshop/Figma</span>
+                                <span class="job-card-tag">Удаленно</span>
+                            </div>
+                        </div>
+                        <div class="job-card-side">
+                            <div class="job-card-price">3 000 ₽</div>
+                            <div class="job-card-meta">Разовый заказ • 3 дня</div>
+                            <span class="guarantee-badge mt-4"><i class="ph-fill ph-shield-check"></i> Гарантия</span>
+                        </div>
+                    </div>
+
+                    <!-- Job 9 -->
+                    <div class="job-card" data-title="Тестировщик мобильного приложения (Бета-тест)"
+                        data-type="one-time" data-format="remote" data-category="it" data-experience="none">
+                        <div class="job-card-main">
+                            <div class="job-card-title"><a href="job-9.html">Тестировщик мобильного приложения
+                                    (Бета-тест)</a></div>
+                            <div class="job-card-employer">
+                                AppDev Studio <i class="ph-fill ph-seal-check verified"></i>
+                            </div>
+                            <div class="job-card-desc">
+                                Приглашаем на бета-тестирование нового приложения для тайм-менеджмента. Нужно пройтись
+                                по всем функциям и написать развернутый фидбек + зафиксировать баги, если они есть.
+                            </div>
+                            <div class="job-card-tags">
+                                <span class="job-card-tag">Тестирование</span>
+                                <span class="job-card-tag">QA</span>
+                                <span class="job-card-tag">Удаленно</span>
+                            </div>
+                        </div>
+                        <div class="job-card-side">
+                            <div class="job-card-price">1 000 ₽</div>
+                            <div class="job-card-meta">Разовый заказ</div>
+                        </div>
+                    </div>
+
+                    <!-- Job 10 -->
+                    <div class="job-card" data-title="Сборщик заказов в выходные" data-type="shifts"
+                        data-format="office" data-category="other" data-experience="none">
+                        <div class="job-card-main">
+                            <div class="job-card-title"><a href="job-10.html">Сборщик заказов в выходные</a></div>
+                            <div class="job-card-employer">
+                                Супермаркет "Быстро" <i class="ph-fill ph-seal-check verified"></i>
+                                • <span style="margin-left: 4px;"><i class="ph-fill ph-star"
+                                        style="color:var(--warning)"></i> 4.8</span>
+                            </div>
+                            <div class="job-card-desc">
+                                Ищем активных ребят для сборки онлайн-заказов в супермаркете. Работа через удобное
+                                приложение. Можно выбирать удобные смены от 4 часов.
+                            </div>
+                            <div class="job-card-tags">
+                                <span class="job-card-tag">Смены</span>
+                                <span class="job-card-tag">Офлайн</span>
+                                <span class="job-card-tag">Без опыта</span>
+                            </div>
+                        </div>
+                        <div class="job-card-side">
+                            <div class="job-card-price">300 ₽ <span
+                                    style="font-size: 0.9rem; color:var(--text-muted); font-weight: 500;">/ час</span>
+                            </div>
+                            <div class="job-card-meta">Постоянная работа</div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End .jobs-main -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.png" alt="TeenWork Logo" class="logo-img"
+                            onerror="this.style.display='none'; document.getElementById('logo-text-ftr').style.display='inline-flex';">
+                        <span class="logo-text" id="logo-text-ftr" style="display: none;"><span
+                                class="text-yellow">Teen</span><span class="text-black">Work</span></span>
+                    </a>
+                    <p class="footer-desc">
+                        Решаем проблему поиска безопасной и легальной подработки для молодежи 14–25 лет. Дорожная карта
+                        2026.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Telegram"><i class="ph-fill ph-telegram-logo"></i></a>
+                        <a href="#" aria-label="MAX"><svg class="svg-icon" viewBox="0 0 80 80" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_5_53_ftr)">
+                                    <path
+                                        d="M60.0255 0H19.9745C8.94288 0 0 8.94288 0 19.9745V60.0255C0 71.0571 8.94288 80 19.9745 80H60.0255C71.0571 80 80 71.0571 80 60.0255V19.9745C80 8.94288 71.0571 0 60.0255 0Z"
+                                        fill="url(#paint0_linear_5_53_ftr)" />
+                                    <path
+                                        d="M60.0255 0H19.9745C8.94288 0 0 8.94288 0 19.9745V60.0255C0 71.0571 8.94288 80 19.9745 80H60.0255C71.0571 80 80 71.0571 80 60.0255V19.9745C80 8.94288 71.0571 0 60.0255 0Z"
+                                        fill="url(#paint1_radial_5_53_ftr)" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M40.6569 70.2662C34.6563 70.2662 31.8678 69.3902 27.0206 65.8862C23.9546 69.8282 14.2458 72.9089 13.8223 67.6382C13.8223 63.6818 12.9463 60.3384 11.9535 56.6884C10.771 52.1916 9.42776 47.1838 9.42776 39.9278C9.42776 22.5977 23.6481 9.56 40.4963 9.56C57.3591 9.56 70.5721 23.2401 70.5721 40.0883C70.6286 56.676 57.2445 70.1778 40.6569 70.2662ZM40.9051 24.5394C32.7 24.1161 26.3052 29.7954 24.889 38.7014C23.721 46.0743 25.7942 55.0532 27.5608 55.5204C28.4076 55.7248 30.5392 54.002 31.8678 52.6734C34.0647 54.1911 36.6229 55.1026 39.2846 55.316C47.7864 55.725 55.051 49.2525 55.6218 40.76C55.9541 32.2494 49.4082 25.0411 40.9051 24.5541V24.5394Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <linearGradient id="paint0_linear_5_53_ftr" x1="9.42776" y1="60.8429" x2="80"
+                                        y2="40" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#44CCFF" />
+                                        <stop offset="0.662" stop-color="#5533EE" />
+                                        <stop offset="1" stop-color="#9933DD" />
+                                    </linearGradient>
+                                    <radialGradient id="paint1_radial_5_53_ftr" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(-1.90326 -35.1348) rotate(51.356) scale(97.0814 40)">
+                                        <stop stop-color="#0000FF" />
+                                        <stop offset="1" stop-opacity="0" />
+                                    </radialGradient>
+                                    <clipPath id="clip0_5_53_ftr">
+                                        <rect width="80" height="80" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg></a>
+                        <a href="#" aria-label="TikTok"><i class="ph-fill ph-tiktok-logo"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Платформа</h4>
+                    <ul>
+                        <li><a href="jobs.html">Поиск работы</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Поддержка</h4>
+                    <ul>
+                        <li><a href="knowledge-base.html">База знаний</a></li>
+                        <li><a href="rules.html">Правила платформы</a></li>
+                        <li><a href="terms.html">Пользовательское соглашение</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 TeenWork. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
