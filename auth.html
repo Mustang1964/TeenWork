@@ -191,6 +191,11 @@
                     style="width: 100%; padding: 16px; font-size: 1.1rem; border-radius: 12px;">Войти</button>
             </form>
 
+            <div class="fz-disclaimer">
+                Данный сайт является некоммерческим прототипом. Сбор и обработка персональных данных не осуществляются. 
+                Все вводимые данные используются только для демонстрации интерфейса и не сохраняются.
+            </div>
+
             <div class="social-auth">
                 <div class="social-divider">или войти через</div>
 
@@ -274,6 +279,12 @@
                 btn.textContent = 'Войти';
             }
         }
+
+        document.getElementById('login-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Успешно (демо-режим)');
+            window.location.href = 'index.html';
+        });
     </script>
 </body>
 
